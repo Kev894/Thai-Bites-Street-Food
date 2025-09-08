@@ -2,314 +2,416 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Thai Bites Street Food | Hindley</title>
-  <meta name="description" content="Thai Bites Street Food — authentic Thai flavours in Hindley, Wigan. Eat-in • Takeaway • Pre-prepped meals." />
-  <meta property="og:title" content="Thai Bites Street Food" />
-  <meta property="og:description" content="Authentic Thai flavours in Hindley, Wigan. Eat-in • Takeaway • Pre-prepped meals." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/logo.png" />
-  <link rel="icon" href="images/logo.png" />
+  <meta name="description" content="Thai Bites Street Food – Pick-up & Delivery in Hindley, Wigan. Authentic Thai dishes, specials, allergens, nutrition per 100g, and athlete meal suggestions."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#0f0f10; --card:#151517; --muted:#9aa0a6; --brand:#0ea5e9; --accent:#22c55e; --text:#eef2f7; --warn:#f59e0b; --danger:#ef4444; --shadow:0 10px 30px rgba(0,0,0,.35); --radius:16px; }
+    :root{
+      --bg:#0f1115; --card:#171a21; --muted:#9aa4b2; --text:#e6e9ef; --brand:#22c55e; --brand2:#10b981; --accent:#fde047; --danger:#ef4444;
+      --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
     *{box-sizing:border-box}
-    html,body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(1200px 600px at 80% -10%, #12202e 0, transparent 60%), var(--bg);}
-    a{color:var(--brand);text-decoration:none}
-    header{position:sticky;top:0;z-index:10;backdrop-filter:blur(8px);background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.3));border-bottom:1px solid rgba(255,255,255,.06)}
-    .wrap{width:min(1100px,92vw);margin:0 auto}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    html,body{margin:0; background:var(--bg); color:var(--text); font-family:Inter,system-ui,-apple-system,Segoi UI,Roboto,Arial,sans-serif;}
+    a{color:var(--brand)}
+    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,#0f1115 40%,rgba(15,17,21,.7)); border-bottom:1px solid rgba(255,255,255,.06); backdrop-filter: blur(8px)}
+    .wrap{max-width:1100px;margin:0 auto;padding:20px}
+    .topbar{display:flex;gap:16px;align-items:center;justify-content:space-between}
     .brand{display:flex;gap:12px;align-items:center}
-    .brand img{width:42px;height:42px;border-radius:10px}
-    .brand h1{font-size:18px;margin:0}
-    .tabs{display:flex;gap:8px;flex-wrap:wrap}
-    .tabs a{padding:8px 10px;border:1px solid rgba(255,255,255,.12);border-radius:10px}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:40px 0 24px;align-items:center}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
-    .kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    .brand img{height:54px;width:54px;object-fit:contain;border-radius:12px}
+    h1{font-family:Kanit,Inter,system-ui; font-weight:800; letter-spacing:.5px; margin:0;font-size: clamp(1.2rem, 2.2vw + .6rem, 2rem)}
+    .addr{font-size:.9rem;color:var(--muted)}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;padding:26px 20px}
+    .hero .card{background:linear-gradient(145deg,#1a1f28,#12161d);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .pill{display:inline-flex;gap:8px;align-items:center;border:1px dashed rgba(255,255,255,.18);border-radius:999px;padding:6px 12px;color:var(--accent);font-weight:700;font-size:.85rem}
+
+    /* grid cards */
+    section{padding:26px 20px}
+    .section-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 12px}
+    .section-title h2{font-family:Kanit;letter-spacing:.4px;margin:0;font-size: clamp(1.1rem, 2vw + .5rem, 1.6rem)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:16px; box-shadow:var(--shadow)}
+    .food{display:flex;gap:12px}
+    .food img{width:92px;height:92px;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.08)}
+    .food h3{margin:0 0 6px;font-size:1.05rem}
     .muted{color:var(--muted)}
-    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-    .chip,.badge{font-size:12px;padding:6px 8px;border:1px solid rgba(255,255,255,.12);border-radius:999px}
-    section{padding:28px 0}
-    h3.sec{font-size:22px;margin:0 0 14px}
-    .menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-    .menu-item{display:flex;flex-direction:column;gap:10px}
-    .thumb{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,.08)}
-    .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
-    .title{font-weight:600}
-    .price{font-weight:700}
-    .notice{font-size:13px;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
-    .col-12{grid-column:span 12}.col-7{grid-column:span 7}.col-5{grid-column:span 5}.col-6{grid-column:span 6}
-    @media(max-width:900px){.hero{grid-template-columns:1fr}.col-7,.col-5,.col-6{grid-column:span 12}}
-    .btn-cta{background:linear-gradient(90deg,var(--brand),#7c3aed);color:#fff;border:none;border-radius:12px;padding:12px 16px;font-weight:700;box-shadow:var(--shadow);cursor:pointer}
-    .btn-ghost{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px 14px;cursor:pointer}
-    footer{border-top:1px solid rgba(255,255,255,.06);margin-top:26px;padding:24px 0 60px}
-    .small{font-size:12px}
+    .price{margin-left:auto;font-weight:800;color:var(--accent)}
+    .row{display:flex;align-items:center;gap:10px}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .badge{font-size:.72rem;padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.15);color:#cbd5e1}
+    .badge.warn{border-color:rgba(239,68,68,.5);color:#fecaca}
+
+    /* specials ribbon */
+    .ribbon{display:inline-block;background:linear-gradient(90deg, #f59e0b, #ef4444);padding:6px 12px;border-radius:999px;font-weight:800}
+
+    /* nutrition table */
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{border-bottom:1px solid rgba(255,255,255,.08);padding:10px 8px;text-align:left;font-size:.95rem}
+    th{color:#cbd5e1;font-weight:700}
+
+    /* order card */
+    form{display:grid;gap:10px}
+    input,textarea,select{width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0f1319;color:var(--text)}
+    .choices{display:flex;gap:10px}
+    .choice{flex:1;text-align:center;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);cursor:pointer}
+    .choice input{display:none}
+    .choice.active{outline:2px solid var(--brand); background:rgba(34,197,94,.08)}
+    button{background:linear-gradient(135deg,var(--brand),var(--brand2));border:none;color:#051109;font-weight:900;padding:12px 14px;border-radius:14px;cursor:pointer}
+
+    /* sticky footer */
+    footer{padding:30px 20px;border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
+
+    /* responsive */
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 620px){
+      .cards{grid-template-columns:1fr}
+      .food img{width:80px;height:80px}
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap nav">
+    <div class="wrap topbar">
       <div class="brand">
         <img src="images/logo.png" alt="Thai Bites Street Food logo" />
-        <h1>Thai Bites Street Food</h1>
+        <div>
+          <h1>Thai Bites Street Food</h1>
+          <div class="addr">Rydal Avenue, Hindley, Wigan, WN2 3QQ • Pick‑up or Delivery only</div>
+        </div>
       </div>
-      <nav class="tabs">
-        <a href="#menu">Menu</a>
-        <a href="#specials">Specials</a>
-        <a href="#prepped">Pre-prepped</a>
-        <a href="#allergens">Allergens</a>
-        <a href="#athletes">Athlete Tips</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="pill">Open today — Order now</div>
     </div>
   </header>
 
   <main class="wrap">
-    <!-- Hero -->
-    <div class="hero">
+    <!-- HERO / INTRO -->
+    <section class="hero">
       <div class="card">
-        <h2>Authentic Thai flavours in Hindley</h2>
-        <p class="muted">Freshly cooked street-food classics, rotating specials, and handy pre-prepped meals.</p>
-        <div class="chips">
-          <span class="chip">Eat-in</span><span class="chip">Takeaway</span><span class="chip">Vegetarian options</span><span class="chip">Allergens labelled</span>
-        </div>
-        <div class="chips" style="margin-top:12px">
-          <a class="btn-cta" href="#menu">View Menu</a>
-          <a class="btn-ghost" href="#contact">Order / Enquiry</a>
-        </div>
+        <h2 class="" style="margin-top:0">Authentic Thai street food, made fresh</h2>
+        <p class="muted">Order for <strong>pick‑up</strong> or <strong>delivery</strong>. For allergens and nutrition, see badges on each item and the tables below. Values are typical per 100g and for guidance only.</p>
+        <ul class="muted" style="margin:0 0 10px 18px">
+          <li>Simple ordering with <strong>Pick‑up</strong> or <strong>Delivery</strong> options</li>
+          <li><strong>Allergens</strong> clearly shown (see legend)</li>
+          <li><strong>Nutrition</strong> per 100g for popular items</li>
+        </ul>
+        <a href="#order" style="display:inline-block;margin-top:6px"><button>Start Order</button></a>
       </div>
       <div class="card">
-        <div class="kicker">Find us</div>
-        <p>Rydal Avenue, Hindley, Wigan, WN2 3QQ</p>
-        <p class="notice">Follow us on <a href="https://www.facebook.com/ThaiBitesStreetFood" target="_blank" rel="noopener">Facebook</a> for updates.</p>
-        <img class="thumb" src="images/storefront.jpg" alt="Thai Bites storefront" />
+        <div class="row" style="gap:12px">
+          <span class="ribbon">Today’s Specials</span>
+        </div>
+        <div class="cards" style="grid-template-columns:1fr;gap:12px;margin-top:12px">
+          <div class="food">
+            <img src="images/hor-mok-fish.jpg" alt="Hor Mok Fish"/>
+            <div style="flex:1">
+              <div class="row">
+                <h3>Hor Mok Fish</h3>
+                <div class="price">£12.50</div>
+              </div>
+              <div class="muted">Steamed Thai curry mousse with fish, served with rice.</div>
+              <div class="badges"><span class="badge warn">Fish</span><span class="badge">Soy</span><span class="badge">Contains chilli</span></div>
+            </div>
+          </div>
+          <div class="food">
+            <img src="images/noodle-soup.jpg" alt="Noodle Soup"/>
+            <div style="flex:1">
+              <div class="row">
+                <h3>Noodle Soup</h3>
+                <div class="price">£12.50</div>
+              </div>
+              <div class="muted">A comforting broth with noodles and fresh herbs.</div>
+              <div class="badges"><span class="badge">Soy</span><span class="badge warn">Gluten</span><span class="badge">Egg (if chosen)</span></div>
+            </div>
+          </div>
+          <div class="food">
+            <img src="images/khao-man-gai.jpg" alt="Khao Man Gai"/>
+            <div style="flex:1">
+              <div class="row">
+                <h3>Khao Man Gai</h3>
+                <div class="price">£12.50</div>
+              </div>
+              <div class="muted">Poached chicken on fragrant rice with zingy sauce.</div>
+              <div class="badges"><span class="badge">Soy</span><span class="badge">Sesame (in sauce)</span></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
     <!-- MENU -->
     <section id="menu">
-      <h3 class="sec">Menu</h3>
-      <div class="notice">Photos are examples — dishes may vary slightly.</div>
-
-      <!-- Starters -->
-      <h4>Starters</h4>
-      <div id="grid-starters" class="menu-grid"></div>
-
-      <!-- Curries -->
-      <h4>Curries</h4>
-      <div id="grid-curries" class="menu-grid"></div>
-
-      <!-- Stir-fries -->
-      <h4>Stir-fries</h4>
-      <div id="grid-stirfries" class="menu-grid"></div>
-
-      <!-- Noodles -->
-      <h4>Noodles</h4>
-      <div id="grid-noodles" class="menu-grid"></div>
-
-      <!-- Rice & Sides -->
-      <h4>Rice & Sides</h4>
-      <div id="grid-sides" class="menu-grid"></div>
-
-      <!-- Drinks -->
-      <h4>Drinks</h4>
-      <div id="grid-drinks" class="menu-grid"></div>
+      <div class="section-title">
+        <h2>Menu</h2>
+        <div class="muted">Tap badges for allergens • Prices include VAT</div>
+      </div>
+      <div class="cards">
+        <!-- Spring Rolls -->
+        <div class="card">
+          <div class="food">
+            <img src="images/spring-rolls.jpg" alt="Crispy spring rolls"/>
+            <div style="flex:1">
+              <div class="row">
+                <h3>Spring Rolls (V)</h3>
+                <div class="price">£5.00</div>
+              </div>
+              <div class="muted">Crispy vegetable rolls, sweet chilli dip.</div>
+              <div class="badges"><span class="badge warn">Gluten</span><span class="badge">Soy</span><span class="badge">Sesame</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Pad Thai -->
+        <div class="card">
+          <div class="food">
+            <img src="images/pad-thai.jpg" alt="Pad Thai"/>
+            <div style="flex:1">
+              <div class="row">
+                <h3>Pad Thai</h3>
+                <div class="price">£10.50</div>
+              </div>
+              <div class="muted">Stir-fried rice noodles, egg, tamarind, peanuts.</div>
+              <div class="badges"><span class="badge">Egg</span><span class="badge warn">Peanuts</span><span class="badge">Soy</span><span class="badge">Fish (sauce)</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Green Curry -->
+        <div class="card">
+          <div class="food">
+            <img src="images/green-curry.jpg" alt="Green Curry"/>
+            <div style="flex:1">
+              <div class="row">
+                <h3>Green Curry</h3>
+                <div class="price">£11.50</div>
+              </div>
+              <div class="muted">Fragrant green curry with coconut milk & basil.</div>
+              <div class="badges"><span class="badge">Soy</span><span class="badge">Fish (sauce)</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Salt & Pepper Chips -->
+        <div class="card">
+          <div class="food">
+            <img src="images/salt-and-pepper-chips.jpg" alt="Salt and Pepper Chips"/>
+            <div style="flex:1">
+              <div class="row">
+                <h3>Salt &amp; Pepper Chips</h3>
+                <div class="price">£3.00</div>
+              </div>
+              <div class="muted">Crispy chips tossed with peppers, onion & spice.</div>
+              <div class="badges"><span class="badge">Vegan</span><span class="badge">GF on request</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Jasmine Rice -->
+        <div class="card">
+          <div class="food">
+            <img src="images/jasmine-rice.jpg" alt="Boiled Jasmine Rice"/>
+            <div style="flex:1">
+              <div class="row">
+                <h3>Boiled Jasmine Rice</h3>
+                <div class="price">£2.00</div>
+              </div>
+              <div class="muted">Steamed fragrant Thai jasmine rice.</div>
+              <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten‑free</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Fries (image fixed) -->
+        <div class="card">
+          <div class="food">
+            <img src="images/fries.jpg" alt="Straight cut fries"/>
+            <div style="flex:1">
+              <div class="row">
+                <h3>Straight Cut Fries</h3>
+                <div class="price">£3.50</div>
+              </div>
+              <div class="muted">Golden fries, perfectly seasoned.</div>
+              <div class="badges"><span class="badge">Vegan</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Specials -->
-    <section id="specials">
-      <h3 class="sec">Specials</h3>
-      <div id="grid-specials" class="menu-grid"></div>
-      <p class="notice">Specials rotate. Ask staff for today’s availability.</p>
-    </section>
-
-    <!-- Pre-prepped Meals -->
+    <!-- PRE-PREPPED MEALS -->
     <section id="prepped">
-      <h3 class="sec">Pre-prepped Meals</h3>
-      <div class="grid">
-        <div class="col-7 card">
-          <p>Grab our chilled, pre-prepped Thai meals to heat at home. Cooked fresh, cooled quickly, clearly labelled for allergens and reheating.</p>
-          <ul>
-            <li>Keep refrigerated (0–5°C). Use within 3 days or freeze on day of purchase.</li>
-            <li>Microwave: heat until piping hot throughout (≥75°C). Stir halfway.</li>
-            <li>Oven: 180°C for 18–25 mins (covered), until hot throughout.</li>
-          </ul>
+      <div class="section-title">
+        <h2>Pre‑prepped Meals</h2>
+        <div class="muted">Chilled, portion‑controlled. Reheat in minutes.</div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <div class="row" style="justify-content:space-between;align-items:flex-start">
+            <div>
+              <h3 style="margin:0 0 6px">High‑Protein Chicken Pad Thai (400g)</h3>
+              <div class="muted">Extra chicken, reduced oil.</div>
+              <div class="badges"><span class="badge">Egg</span><span class="badge warn">Peanuts</span><span class="badge">Soy</span><span class="badge">Fish (sauce)</span></div>
+            </div>
+            <div class="price">£7.50</div>
+          </div>
         </div>
-        <div class="col-5 card">
-          <strong>Typical selections</strong>
-          <ul>
-            <li>Chicken Green Curry + Jasmine Rice</li>
-            <li>Pad Krapow (Basil Stir-fry) + Rice</li>
-            <li>Veggie Pad Thai</li>
-          </ul>
-          <p class="notice small">Ask in-store for today’s batch and macros.</p>
+        <div class="card">
+          <div class="row" style="justify-content:space-between;align-items:flex-start">
+            <div>
+              <h3 style="margin:0 0 6px">Lean Green Curry &amp; Rice (450g)</h3>
+              <div class="muted">Light coconut option, jasmine rice.</div>
+              <div class="badges"><span class="badge">Soy</span><span class="badge">Fish (sauce)</span></div>
+            </div>
+            <div class="price">£7.50</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="row" style="justify-content:space-between;align-items:flex-start">
+            <div>
+              <h3 style="margin:0 0 6px">Tofu &amp; Veg Stir‑fry (400g)</h3>
+              <div class="muted">High‑veg, balanced carbs.</div>
+              <div class="badges"><span class="badge">Soy</span><span class="badge">Vegan</span></div>
+            </div>
+            <div class="price">£6.95</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Allergens & Nutrition -->
+    <!-- ALLERGENS LEGEND -->
     <section id="allergens">
-      <h3 class="sec">Allergens & Nutrition</h3>
-      <div class="grid">
-        <div class="col-7 card">
-          <p>We label allergens on our menu items. Common allergens we handle include <em>gluten, soy, peanuts, tree nuts, eggs, fish, shellfish, sesame</em>. While we take great care, cross-contact is possible.</p>
-          <div class="chips"><span class="badge">GF = Gluten-free</span><span class="badge">V = Vegetarian</span><span class="badge">Ve = Vegan</span><span class="badge">🌶 = Spicy</span></div>
+      <div class="section-title">
+        <h2>Allergens</h2>
+        <div class="muted">If you have a food allergy or intolerance, please speak to us before ordering.</div>
+      </div>
+      <div class="card">
+        <div class="badges" style="gap:10px">
+          <span class="badge warn">Gluten</span>
+          <span class="badge warn">Peanuts</span>
+          <span class="badge warn">Tree Nuts</span>
+          <span class="badge warn">Fish</span>
+          <span class="badge warn">Shellfish</span>
+          <span class="badge">Soy</span>
+          <span class="badge">Egg</span>
+          <span class="badge">Sesame</span>
+          <span class="badge">Milk</span>
+          <span class="badge">Mustard</span>
+          <span class="badge">Sulphites</span>
         </div>
-        <div class="col-5 card">
-          <strong>Typical nutrition (per 100g)</strong>
-          <table class="small" style="width:100%;border-collapse:collapse;margin-top:8px">
-            <thead>
-              <tr>
-                <th style="text-align:left;border-bottom:1px solid rgba(255,255,255,.1);padding:6px">Item</th>
-                <th style="text-align:right;border-bottom:1px solid rgba(255,255,255,.1);padding:6px">kcal</th>
-                <th style="text-align:right;border-bottom:1px solid rgba(255,255,255,.1);padding:6px">Protein</th>
-                <th style="text-align:right;border-bottom:1px solid rgba(255,255,255,.1);padding:6px">Carbs</th>
-                <th style="text-align:right;border-bottom:1px solid rgba(255,255,255,.1);padding:6px">Fat</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td style="padding:6px">Jasmine rice</td><td style="text-align:right;padding:6px">130</td><td style="text-align:right;padding:6px">2.4g</td><td style="text-align:right;padding:6px">28g</td><td style="text-align:right;padding:6px">0.3g</td></tr>
-              <tr><td style="padding:6px">Stir-fried veg</td><td style="text-align:right;padding:6px">80</td><td style="text-align:right;padding:6px">2.0g</td><td style="text-align:right;padding:6px">9g</td><td style="text-align:right;padding:6px">3.5g</td></tr>
-              <tr><td style="padding:6px">Chicken curry (avg)</td><td style="text-align:right;padding:6px">150</td><td style="text-align:right;padding:6px">10g</td><td style="text-align:right;padding:6px">5g</td><td style="text-align:right;padding:6px">9g</td></tr>
-              <tr><td style="padding:6px">Veggie noodle dish</td><td style="text-align:right;padding:6px">120</td><td style="text-align:right;padding:6px">4g</td><td style="text-align:right;padding:6px">20g</td><td style="text-align:right;padding:6px">2.5g</td></tr>
-            </tbody>
-          </table>
-          <p class="notice small">Estimates for guidance only; actuals vary by portion and recipe.</p>
-        </div>
+        <p class="muted" style="margin-top:12px">We prepare food in a kitchen that handles all 14 allergens. Cross‑contamination may occur. Ask us for our full allergen matrix.</p>
       </div>
     </section>
 
-    <!-- Athlete tips -->
+    <!-- NUTRITION -->
+    <section id="nutrition">
+      <div class="section-title">
+        <h2>Typical Nutrition (per 100g)</h2>
+        <div class="muted">Guidance values; may vary by portion and ingredients.</div>
+      </div>
+      <div class="card">
+        <table aria-label="Nutrition per 100 grams">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Energy (kcal)</th>
+              <th>Protein (g)</th>
+              <th>Fat (g)</th>
+              <th>Saturates (g)</th>
+              <th>Carbs (g)</th>
+              <th>Sugars (g)</th>
+              <th>Salt (g)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Boiled Jasmine Rice</td><td>130</td><td>2.4</td><td>0.3</td><td>0.1</td><td>28</td><td>0.1</td><td>0.0</td></tr>
+            <tr><td>Salt &amp; Pepper Chips</td><td>240</td><td>3.0</td><td>10.0</td><td>2.0</td><td>33</td><td>1.2</td><td>0.8</td></tr>
+            <tr><td>Spring Rolls</td><td>220</td><td>6.0</td><td>11.0</td><td>2.5</td><td>25</td><td>3.0</td><td>0.7</td></tr>
+            <tr><td>Pad Thai</td><td>200</td><td>7.0</td><td>7.0</td><td>1.5</td><td>28</td><td>5.0</td><td>1.2</td></tr>
+            <tr><td>Green Curry</td><td>140</td><td>5.0</td><td>10.0</td><td>6.0</td><td>5</td><td>2.0</td><td>0.9</td></tr>
+          </tbody>
+        </table>
+        <p class="muted" style="margin-top:10px">These figures are estimates for guidance and not a substitute for dietary advice.</p>
+      </div>
+    </section>
+
+    <!-- ATHLETE SUGGESTIONS -->
     <section id="athletes">
-      <h3 class="sec">Suggestions for Athletes</h3>
-      <div class="grid">
-        <div class="col-6 card">
-          <strong>Bulking / Strength</strong>
-          <ul><li>Add extra rice or noodles (+carbs).</li><li>Choose protein-dense mains (chicken, prawns, tofu); add extra portion.</li><li>Coconut-based curries help increase calories.</li></ul>
+      <div class="section-title">
+        <h2>Athlete Suggestions</h2>
+        <div class="muted">Simple picks to help you hit your targets.</div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3 style="margin-top:0">Lean / Cut</h3>
+          <ul class="muted">
+            <li><strong>Khao Man Gai (no skin)</strong> + extra greens (high protein, moderate carbs)</li>
+            <li><strong>Lean Green Curry</strong> (light coconut) + <strong>Jasmine Rice (small)</strong></li>
+            <li><strong>Tofu &amp; Veg Stir‑fry</strong> with light sauce</li>
+          </ul>
+          <p class="muted">Tip: aim for 400–600 kcal per meal, prioritising protein and veg.</p>
         </div>
-        <div class="col-6 card">
-          <strong>Cutting / Shredding</strong>
-          <ul><li>Swap rice for extra veg; ask for “light oil”.</li><li>Choose grilled or stir-fries; avoid creamy sauces.</li><li>Ask for “no added sugar” where possible; watch sauces.</li></ul>
+        <div class="card">
+          <h3 style="margin-top:0">Maintenance</h3>
+          <ul class="muted">
+            <li><strong>Pad Thai</strong> + side <strong>Jasmine Rice (small)</strong></li>
+            <li><strong>Green Curry</strong> + <strong>Jasmine Rice</strong></li>
+          </ul>
+          <p class="muted">Tip: 600–800 kcal per meal with balanced macros.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Bulk</h3>
+          <ul class="muted">
+            <li><strong>Pad Thai (extra chicken)</strong> + <strong>Jasmine Rice</strong></li>
+            <li><strong>Khao Man Gai</strong> + <strong>Salt &amp; Pepper Chips</strong></li>
+          </ul>
+          <p class="muted">Tip: 800–1,000 kcal per meal; add carbs and healthy fats.</p>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-      <h3 class="sec">Contact / Order Enquiry</h3>
-      <div class="grid">
-        <div class="col-7 card">
-          <form action="https://formspree.io/f/mblaqawb" method="POST">
-            <div class="grid">
-              <div class="col-6"><label>Your name<br/><input required name="name" type="text" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0d0f12;color:var(--text)"></label></div>
-              <div class="col-6"><label>Your email<br/><input required name="email" type="email" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0d0f12;color:var(--text)"></label></div>
-              <div class="col-12"><label>Message<br/><textarea required name="message" rows="5" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0d0f12;color:var(--text)"></textarea></label></div>
-            </div>
-            <div class="chips" style="margin-top:10px">
-              <button class="btn-cta" type="submit">Send</button>
-              <a class="btn-ghost" href="https://www.facebook.com/ThaiBitesStreetFood" target="_blank" rel="noopener">Message on Facebook</a>
-            </div>
-          </form>
-        </div>
-        <div class="col-5 card">
-          <strong>Hours & pickup</strong>
-          <p class="notice">Check Facebook for the latest service times and specials.</p>
-          <p><span class="kicker">Address</span><br/>Rydal Avenue, Hindley, Wigan, WN2 3QQ</p>
-        </div>
+    <!-- ORDER FORM -->
+    <section id="order">
+      <div class="section-title">
+        <h2>Order</h2>
+        <div class="muted">Choose <strong>Pick‑up</strong> or <strong>Delivery</strong>. No dine‑in service.</div>
+      </div>
+      <div class="card">
+        <form action="https://formspree.io/f/mblaqawb" method="POST">
+          <div class="choices" id="serviceChoices">
+            <label class="choice active"><input type="radio" name="service" value="Pick-up" checked>Pick‑up</label>
+            <label class="choice"><input type="radio" name="service" value="Delivery">Delivery</label>
+          </div>
+          <div class="row" style="gap:10px">
+            <input name="name" placeholder="Your name" required />
+            <input name="phone" placeholder="Phone" required />
+          </div>
+          <input type="email" name="email" placeholder="Email (for confirmation)" />
+          <textarea name="order" rows="5" placeholder="Your order (item names, quantities, options)…" required></textarea>
+          <input name="address" placeholder="Address (delivery only)" />
+          <button type="submit">Send Order</button>
+        </form>
       </div>
     </section>
+
   </main>
 
-  <footer>
-    <div class="wrap">
-      <div class="row" style="display:flex;align-items:center;justify-content:space-between;gap:12px">
-        <div class="brand">
-          <img src="images/logo.png" alt="Thai Bites Street Food logo" />
-          <div><strong>Thai Bites Street Food</strong><br/><span class="small muted">Hindley, Wigan</span></div>
-        </div>
-        <div class="chips"><a class="btn-ghost" href="#menu">Menu</a><a class="btn-ghost" href="#specials">Specials</a><a class="btn-ghost" href="#contact">Contact</a></div>
-      </div>
-      <p class="small muted" style="margin-top:10px">© <span id="y"></span> Thai Bites Street Food</p>
-    </div>
+  <footer class="wrap">
+    <div>© <span id="yr"></span> Thai Bites Street Food • Hindley, Wigan • <a href="https://www.facebook.com/ThaiBitesStreetFood" target="_blank" rel="noopener">Facebook</a></div>
+    <div class="muted" style="margin-top:8px">Allergen and nutrition info are indicative only. Please contact us for specific requirements.</div>
   </footer>
 
-  <!-- ===== Menu Data & Renderer ===== -->
   <script>
-    // PRICE NOTE: Spring Rolls are £5.00 as requested.
-
-    const gbp = v => "£" + Number(v).toFixed(2);
-
-    const CATS = {
-      starters: [
-        {id:"spring-rolls", name:"Spring Rolls (4)", price:5.00, img:"images/spring-rolls.jpg", desc:"Crisp veggie rolls with sweet chilli dip.", tags:["V","Ve"], allergens:["gluten"]},
-        {id:"chicken-satay", name:"Chicken Satay (4)", price:6.50, img:"images/chicken-satay.jpg", desc:"Marinated skewers with peanut sauce.", tags:[], allergens:["peanuts","soy"]},
-        {id:"prawn-crackers", name:"Prawn Crackers", price:2.50, img:"images/prawn-crackers.jpg", desc:"Light & crunchy with chilli dip.", tags:[], allergens:["shellfish"]},
-        {id:"thai-fish-cakes", name:"Thai Fish Cakes (4)", price:6.50, img:"images/thai-fish-cakes.jpg", desc:"Spiced fish cakes with cucumber relish.", tags:["🌶"], allergens:["fish","eggs"]},
-        {id:"veg-gyoza", name:"Veg Gyoza (5)", price:5.50, img:"images/veg-gyoza.jpg", desc:"Pan-fried dumplings, soy dip.", tags:["V","Ve"], allergens:["gluten","soy","sesame"]}
-      ],
-      curries: [
-        {id:"green-curry", name:"Green Curry (Chicken/Tofu)", price:10.50, img:"images/green-curry.jpg", desc:"Fragrant green curry with coconut milk & veg.", tags:["GF","🌶"], allergens:["fish"]},
-        {id:"red-curry", name:"Red Curry (Chicken/Tofu)", price:10.50, img:"images/red-curry.jpg", desc:"Aromatic red curry, bamboo shoots & basil.", tags:["GF","🌶"], allergens:["fish"]},
-        {id:"massaman", name:"Massaman Curry (Beef/Tofu)", price:11.50, img:"images/massaman.jpg", desc:"Rich southern curry with potatoes & peanuts.", tags:["GF"], allergens:["peanuts"]},
-        {id:"panang", name:"Panang Curry (Chicken/Tofu)", price:10.95, img:"images/panang.jpg", desc:"Thick, slightly sweet curry with kaffir lime.", tags:["GF"], allergens:["fish"]}
-      ],
-      stirfries: [
-        {id:"pad-krapow", name:"Pad Krapow (Basil Stir-fry)", price:10.50, img:"images/pad-krapow.jpg", desc:"Chilli, garlic, holy basil. Fried egg optional.", tags:["🌶"], allergens:["soy","gluten"]},
-        {id:"cashew-chicken", name:"Cashew Chicken", price:10.95, img:"images/cashew-chicken.jpg", desc:"Wok-fried peppers, onions & roasted cashews.", tags:[], allergens:["tree nuts","soy","gluten"]},
-        {id:"sweet-sour", name:"Sweet & Sour (Chicken/Tofu)", price:9.95, img:"images/sweet-sour.jpg", desc:"Crisp veg in tangy sauce.", tags:["V"], allergens:["soy","gluten"]},
-        {id:"garlic-pepper", name:"Garlic & Pepper (Chicken/Tofu)", price:9.95, img:"images/garlic-pepper.jpg", desc:"Wok-fried garlic pepper sauce.", tags:[], allergens:["soy","gluten"]}
-      ],
-      noodles: [
-        {id:"pad-thai", name:"Pad Thai (Chicken/Prawn/Tofu)", price:10.95, img:"images/pad-thai.jpg", desc:"Tamarind, egg, beansprouts, peanuts, lime.", tags:["V"], allergens:["peanuts","eggs","soy"]},
-        {id:"pad-see-ew", name:"Pad See Ew (Chicken/Tofu)", price:10.50, img:"images/pad-see-ew.jpg", desc:"Thick rice noodles, soy, Chinese broccoli.", tags:["V"], allergens:["soy","gluten"]},
-        {id:"drunken-noodles", name:"Pad Kee Mao (Drunken Noodles)", price:10.95, img:"images/drunken-noodles.jpg", desc:"Spicy basil noodles with veg.", tags:["🌶"], allergens:["soy","gluten"]}
-      ],
-      sides: [
-        {id:"salt-pepper-chips", name:"Salt & Pepper Chips", price:3.00, img:"images/salt-pepper-chips.jpg", desc:"Seasoned chips tossed with aromatics.", tags:["V","Ve"], allergens:[]},
-        {id:"boiled-jasmine-rice", name:"Boiled Jasmine Rice", price:2.00, img:"images/jasmine-rice.jpg", desc:"Fragrant Thai jasmine rice.", tags:["GF","V","Ve"], allergens:[]},
-        {id:"sticky-rice", name:"Sticky Rice", price:3.00, img:"images/sticky-rice.jpg", desc:"Traditional glutinous rice.", tags:["GF","V","Ve"], allergens:[]},
-        {id:"egg-fried-rice", name:"Egg Fried Rice", price:4.50, img:"images/egg-fried-rice.jpg", desc:"Wok-fried rice with egg & spring onion.", tags:[], allergens:["eggs","soy","gluten"]},
-        {id:"thai-slaw", name:"Thai Slaw", price:3.50, img:"images/thai-slaw.jpg", desc:"Crunchy veg, light dressing.", tags:["V","Ve"], allergens:["sesame","soy"]}
-      ],
-      drinks: [
-        {id:"thai-iced-tea", name:"Thai Iced Tea", price:3.50, img:"images/thai-iced-tea.jpg", desc:"Sweet tea with milk over ice.", tags:[], allergens:["milk"]},
-        {id:"thai-iced-coffee", name:"Thai Iced Coffee", price:3.50, img:"images/thai-iced-coffee.jpg", desc:"Strong & sweet, over ice.", tags:[], allergens:["milk"]},
-        {id:"soft-drinks", name:"Soft Drinks (can)", price:1.50, img:"images/soft-drinks.jpg", desc:"Cola, Diet, Lemonade, etc.", tags:[], allergens:[]},
-        {id:"water", name:"Still / Sparkling Water", price:1.20, img:"images/water.jpg", desc:"Chilled bottles.", tags:[], allergens:[]}
-      ]
-    };
-
-    const SPECIALS = [
-      {id:"hor-mok-fish", name:"Hor Mok Fish (served with rice)", price:12.50, img:"images/hor-mok-fish.jpg", desc:"Steamed Thai fish curry custard with herbs.", tags:["GF"], allergens:["fish","eggs"]},
-      {id:"noodle-soup", name:"Thai Noodle Soup", price:12.50, img:"images/noodle-soup.jpg", desc:"Aromatic broth, noodles and fresh herbs.", tags:[], allergens:["gluten","soy"]},
-      {id:"khao-man-ghai", name:"Khao Man Ghai", price:12.50, img:"images/khao-man-ghai.jpg", desc:"Poached chicken, ginger rice, spicy dipping sauce.", tags:[], allergens:["soy"]}
-    ];
-
-    function cardHTML(item){
-      const tags = (item.tags||[]).map(t=>`<span class="badge">${t}</span>`).join("");
-      const allerg = item.allergens?.length ? `<span class="small muted">Allergens: ${item.allergens.join(", ")}</span>` : `<span class="small" style="color:var(--accent)">No major allergens</span>`;
-      return `
-        <article class="card menu-item" id="${item.id}">
-          <img class="thumb" loading="lazy" src="${item.img}" alt="${item.name}">
-          <div class="row"><div class="title">${item.name}</div><div class="price">${gbp(item.price)}</div></div>
-          <div>${tags}</div>
-          <p class="notice">${item.desc||""}</p>
-          <div class="row"><span class="small">${allerg}</span></div>
-        </article>
-      `;
-    }
-    function render(id, list){ document.getElementById(id).innerHTML = list.map(cardHTML).join(""); }
-
-    render("grid-starters", CATS.starters);
-    render("grid-curries", CATS.curries);
-    render("grid-stirfries", CATS.stirfries);
-    render("grid-noodles", CATS.noodles);
-    render("grid-sides", CATS.sides);
-    render("grid-drinks", CATS.drinks);
-    render("grid-specials", SPECIALS);
-
-    document.getElementById("y").textContent = new Date().getFullYear();
+    // toggle active style on service choices
+    document.querySelectorAll('#serviceChoices .choice').forEach(el=>{
+      el.addEventListener('click',()=>{
+        document.querySelectorAll('#serviceChoices .choice').forEach(c=>c.classList.remove('active'))
+        el.classList.add('active');
+        el.querySelector('input').checked = true;
+      })
+    })
+    // year
+    document.getElementById('yr').textContent = new Date().getFullYear()
   </script>
 </body>
 </html>
