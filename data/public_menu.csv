@@ -1,0 +1,45 @@
+Name,Category,Price,Description,Allergens,Image,Special
+Pad Kra Pao,mains,9.5,"A fragrant stir-fry with Thai basil, chilies, and your choice of protein, served with rice.","Soy, Gluten, Fish Sauce",Pad-kra-pao.jpg,False
+Massaman Curry,mains,9.5,"A rich, mildly spiced curry with potatoes, peanuts, and tender meat in a creamy coconut sauce.","Peanuts, Soy, Fish, Shellfish (may contain), Gluten",Massaman.jpg,False
+Panang Curry,mains,9.5,"A smooth, aromatic red curry with a hint of sweetness and kaffir lime.","Soy, Fish Sauce, Nuts (may contain)",Panang.jpg,False
+Chicken Cashew Nut,mains,9.5,"Wok-fried chicken with crunchy cashews, vegetables, and a savoury sauce.","Cashew Nuts, Soy, Gluten",Chicken-Cashew-Nut.jpg,False
+Chicken Fried Rice,mains,7.0,"Classic Thai fried rice with chicken, egg, and vegetables.","Egg, Soy, Gluten",,False
+Sweet and sour Chicken or Pork,mains,9.5,Crispy meat tossed in a tangy sweet and sour sauce with fresh vegetables.,"Soy, Gluten",,False
+Larb,mains,9.5,"A traditional Thai salad with minced meat, lime, herbs, and a kick of chili.","Fish Sauce, Soy",,False
+Beef with Oyster Sauce,mains,10.5,"Tender beef stir-fried with oyster sauce, mushrooms, and vegetables.","Soy, Gluten, Shellfish",,False
+Pad Thai Chicken,mains,9.5,"Thailand’s famous noodle dish with tamarind sauce, egg, beansprouts, and peanuts.","Peanuts, Soy, Egg, Fish Sauce",,False
+nan,mains,0.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Specials,mains,0.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Kao Man Gai,mains,12.0,Steamed chicken served with fragrant rice and a rich ginger-garlic dipping sauce.,"Soy, Gluten (in dipping sauce)",,False
+Hor Mok Fish,mains,12.0,Steamed fish curry custard infused with Thai herbs and coconut milk.,"Fish, Soy",,True
+Noodle Souppork or Chicken,soups,12.0,Comforting Thai noodle soup with your choice of pork or chicken.,"Soy, Gluten, Egg",,True
+Special Thai Fried Rice,mains,15.0,A flavourful fried rice with Thai spices and a choice of protein.,"Egg, Soy, Gluten",,False
+nan,mains,0.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Soups,soups,0.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Tom Yum Soup,soups,9.5,"A hot and sour Thai soup with lemongrass, lime, and chili.","Fish Sauce, Shellfish (may contain), Soy",,False
+Minced Pork Suffed Courgette,mains,9.5,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+nan,mains,0.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Sides,mains,0.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Boiled Rice,sides,2.0,"Simple, fluffy steamed rice to accompany your meal.",None,,False
+Plain Fried Rice,mains,3.0,Lightly fried rice with egg and subtle seasoning.,"Egg, Soy, Gluten",,False
+Plain straight skin on Fries,mains,2.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Salt and Pepper Chips,sides,3.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Onion Rings,mains,3.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+nan,mains,0.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+nan,mains,0.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+nan,mains,0.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Starters,mains,0.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Chicken Satay Skewers,starters,5.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Barbecue Pork Skewers,starters,6.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Vegetable or Meat Spring Rolls,starters,5.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Sui Mai,mains,4.5,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+nan,mains,0.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Pre-Prepped Meals,prepped,0.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Larb,mains,5.0,"A traditional Thai salad with minced meat, lime, herbs, and a kick of chili.","Fish Sauce, Soy",,False
+Chicken Cashew Nut,mains,5.0,"Wok-fried chicken with crunchy cashews, vegetables, and a savoury sauce.","Cashew Nuts, Soy, Gluten",,False
+Sweet and Sour Pork or Chicken,mains,5.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Massaman Curry,mains,5.0,"A rich, mildly spiced curry with potatoes, peanuts, and tender meat in a creamy coconut sauce.","Peanuts, Soy, Fish, Shellfish (may contain), Gluten",,False
+Chicken Fried Rice,mains,5.0,"Classic Thai fried rice with chicken, egg, and vegetables.","Egg, Soy, Gluten",,False
+Panang Curry,mains,5.0,"A smooth, aromatic red curry with a hint of sweetness and kaffir lime.","Soy, Fish Sauce, Nuts (may contain)",,False
+Pad Thai,mains,5.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False
+Thai Green Curry,mains,5.0,"A traditional Thai dish prepared with authentic herbs, spices, and flavours.","May contain Soy, Gluten, Nuts, Fish, Shellfish, Egg",,False

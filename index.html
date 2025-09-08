@@ -2,416 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Thai Bites Street Food | Hindley</title>
-  <meta name="description" content="Thai Bites Street Food – Pick-up & Delivery in Hindley, Wigan. Authentic Thai dishes, specials, allergens, nutrition per 100g, and athlete meal suggestions."/>
+  <meta name="description" content="Thai Bites Street Food – Pick-up & Delivery in Hindley, Wigan. Authentic Thai dishes and weekly specials."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0f1115; --card:#171a21; --muted:#9aa4b2; --text:#e6e9ef; --brand:#22c55e; --brand2:#10b981; --accent:#fde047; --danger:#ef4444;
-      --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0; background:var(--bg); color:var(--text); font-family:Inter,system-ui,-apple-system,Segoi UI,Roboto,Arial,sans-serif;}
-    a{color:var(--brand)}
-    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,#0f1115 40%,rgba(15,17,21,.7)); border-bottom:1px solid rgba(255,255,255,.06); backdrop-filter: blur(8px)}
-    .wrap{max-width:1100px;margin:0 auto;padding:20px}
-    .topbar{display:flex;gap:16px;align-items:center;justify-content:space-between}
-    .brand{display:flex;gap:12px;align-items:center}
-    .brand img{height:54px;width:54px;object-fit:contain;border-radius:12px}
-    h1{font-family:Kanit,Inter,system-ui; font-weight:800; letter-spacing:.5px; margin:0;font-size: clamp(1.2rem, 2.2vw + .6rem, 2rem)}
-    .addr{font-size:.9rem;color:var(--muted)}
-
-    /* hero */
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;padding:26px 20px}
-    .hero .card{background:linear-gradient(145deg,#1a1f28,#12161d);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
-    .pill{display:inline-flex;gap:8px;align-items:center;border:1px dashed rgba(255,255,255,.18);border-radius:999px;padding:6px 12px;color:var(--accent);font-weight:700;font-size:.85rem}
-
-    /* grid cards */
-    section{padding:26px 20px}
-    .section-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 12px}
-    .section-title h2{font-family:Kanit;letter-spacing:.4px;margin:0;font-size: clamp(1.1rem, 2vw + .5rem, 1.6rem)}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:16px; box-shadow:var(--shadow)}
-    .food{display:flex;gap:12px}
-    .food img{width:92px;height:92px;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.08)}
-    .food h3{margin:0 0 6px;font-size:1.05rem}
-    .muted{color:var(--muted)}
-    .price{margin-left:auto;font-weight:800;color:var(--accent)}
-    .row{display:flex;align-items:center;gap:10px}
-    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .badge{font-size:.72rem;padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.15);color:#cbd5e1}
-    .badge.warn{border-color:rgba(239,68,68,.5);color:#fecaca}
-
-    /* specials ribbon */
-    .ribbon{display:inline-block;background:linear-gradient(90deg, #f59e0b, #ef4444);padding:6px 12px;border-radius:999px;font-weight:800}
-
-    /* nutrition table */
-    table{width:100%;border-collapse:collapse;margin-top:8px}
-    th,td{border-bottom:1px solid rgba(255,255,255,.08);padding:10px 8px;text-align:left;font-size:.95rem}
-    th{color:#cbd5e1;font-weight:700}
-
-    /* order card */
-    form{display:grid;gap:10px}
-    input,textarea,select{width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0f1319;color:var(--text)}
-    .choices{display:flex;gap:10px}
-    .choice{flex:1;text-align:center;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);cursor:pointer}
-    .choice input{display:none}
-    .choice.active{outline:2px solid var(--brand); background:rgba(34,197,94,.08)}
-    button{background:linear-gradient(135deg,var(--brand),var(--brand2));border:none;color:#051109;font-weight:900;padding:12px 14px;border-radius:14px;cursor:pointer}
-
-    /* sticky footer */
-    footer{padding:30px 20px;border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
-
-    /* responsive */
-    @media (max-width: 900px){
-      .hero{grid-template-columns:1fr}
-      .cards{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width: 620px){
-      .cards{grid-template-columns:1fr}
-      .food img{width:80px;height:80px}
-    }
+    :root{ --brand:#0ea5e9; --brand-dark:#0284c7; --bg:#0b1220; --card:#101a2d; --muted:#96a3b3; --text:#e6eef8; --accent:#22c55e; }
+    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif}
+    a{color:inherit}
+    header{ position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(16,26,45,0.95), rgba(16,26,45,0.7)); backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.06) }
+    .container{max-width:1100px;margin:0 auto;padding:16px}
+    .topbar{display:flex;gap:16px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,0.12)}
+    .title{font-size:1.4rem;font-weight:700;line-height:1.1}
+    .subtitle{font-size:0.95rem;color:var(--muted)}
+    .pill{display:inline-flex;align-items:center;gap:.5rem;background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.3);color:#bfe8fb;padding:.4rem .7rem;border-radius:999px;font-size:.85rem}
+    nav{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+    .tab{cursor:pointer;border:1px solid rgba(255,255,255,0.12);background:#0f172a;color:#e2e8f0;padding:.5rem .8rem;border-radius:999px;font-size:.9rem}
+    .tab.active{background:var(--brand);border-color:var(--brand-dark);color:#06121b}
+    .hero{padding:24px 0} .hero .row{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,0.06);border-radius:18px;padding:16px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .menu-grid{margin-top:14px}
+    .menu-card{grid-column:span 12;display:flex;gap:14px;align-items:flex-start}
+    @media(min-width:640px){.menu-card{grid-column:span 6}}
+    @media(min-width:1024px){.menu-card{grid-column:span 4}}
+    .thumb{width:92px;height:92px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,.08);background:#0a0f1a}
+    .meta{flex:1} .meta h3{margin:0 0 6px 0;font-size:1.05rem} .desc{color:var(--muted);font-size:.9rem;margin:0}
+    .price{font-weight:700;margin-left:auto} .row-line{display:flex;gap:8px;align-items:center;justify-content:space-between}
+    .badge{font-size:.75rem;color:#cde5f7;border:1px solid rgba(14,165,233,.3);background:rgba(14,165,233,.1);padding:.2rem .5rem;border-radius:999px}
+    section{margin:26px 0} section h2{margin:0 0 8px 0;font-size:1.3rem} .section-sub{color:var(--muted);font-size:.95rem;margin-top:0}
+    footer{margin-top:32px;border-top:1px solid rgba(255,255,255,0.06)} .footer-grid{display:grid;gap:16px;grid-template-columns:1fr} @media(min-width:640px){.footer-grid{grid-template-columns:1fr 1fr}}
+    .small{color:var(--muted);font-size:.9rem} .cta{display:inline-flex;gap:.5rem;align-items:center;background:var(--accent);border:1px solid #16a34a;color:#04110a;padding:.6rem .9rem;border-radius:12px;text-decoration:none;font-weight:700}
+    .quicklinks{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px} .quicklinks .tab{text-decoration:none;line-height:1}
+    .table{width:100%;border-collapse:collapse;border-spacing:0} .table th,.table td{border-bottom:1px solid rgba(255,255,255,0.08);padding:10px;text-align:left;font-size:.9rem}
+    .kpi{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px} .kpi .mini{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);padding:.2rem .5rem;border-radius:999px;font-size:.8rem}
+    .notice{background:rgba(34,197,94,0.08);border:1px dashed rgba(34,197,94,0.3);padding:10px;border-radius:12px;color:#c9f5d6}
+    .warn{background:rgba(234,179,8,0.08);border:1px dashed rgba(234,179,8,0.3);color:#ffe9b0}
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap topbar">
-      <div class="brand">
-        <img src="images/logo.png" alt="Thai Bites Street Food logo" />
+    <div class="container">
+      <div class="topbar">
+        <img class="logo" src="assets/images/logo.png" alt="Thai Bites Street Food logo" />
         <div>
-          <h1>Thai Bites Street Food</h1>
-          <div class="addr">Rydal Avenue, Hindley, Wigan, WN2 3QQ • Pick‑up or Delivery only</div>
+          <div class="title">Thai Bites Street Food</div>
+          <div class="subtitle">Pick-up & Delivery • Rydal Avenue, Hindley, Wigan, WN2 3QQ</div>
         </div>
+        <span class="pill" style="margin-left:auto">No eat-in • Card/Cash accepted</span>
       </div>
-      <div class="pill">Open today — Order now</div>
+      <nav id="tabs"></nav>
+      <nav id="quicklinks" class="quicklinks">
+        <a class="tab" href="#specials">Specials</a>
+        <a class="tab" href="#menu">Menu</a>
+        <a class="tab" href="#prepped">Pre-prepped</a>
+        <a class="tab" href="#allergens">Allergens</a>
+        <a class="tab" href="#nutrition">Nutrition</a>
+        <a class="tab" href="#athlete">Athlete</a>
+      </nav>
     </div>
   </header>
 
-  <main class="wrap">
-    <!-- HERO / INTRO -->
+  <main class="container">
     <section class="hero">
-      <div class="card">
-        <h2 class="" style="margin-top:0">Authentic Thai street food, made fresh</h2>
-        <p class="muted">Order for <strong>pick‑up</strong> or <strong>delivery</strong>. For allergens and nutrition, see badges on each item and the tables below. Values are typical per 100g and for guidance only.</p>
-        <ul class="muted" style="margin:0 0 10px 18px">
-          <li>Simple ordering with <strong>Pick‑up</strong> or <strong>Delivery</strong> options</li>
-          <li><strong>Allergens</strong> clearly shown (see legend)</li>
-          <li><strong>Nutrition</strong> per 100g for popular items</li>
-        </ul>
-        <a href="#order" style="display:inline-block;margin-top:6px"><button>Start Order</button></a>
-      </div>
-      <div class="card">
-        <div class="row" style="gap:12px">
-          <span class="ribbon">Today’s Specials</span>
-        </div>
-        <div class="cards" style="grid-template-columns:1fr;gap:12px;margin-top:12px">
-          <div class="food">
-            <img src="images/hor-mok-fish.jpg" alt="Hor Mok Fish"/>
-            <div style="flex:1">
-              <div class="row">
-                <h3>Hor Mok Fish</h3>
-                <div class="price">£12.50</div>
-              </div>
-              <div class="muted">Steamed Thai curry mousse with fish, served with rice.</div>
-              <div class="badges"><span class="badge warn">Fish</span><span class="badge">Soy</span><span class="badge">Contains chilli</span></div>
-            </div>
-          </div>
-          <div class="food">
-            <img src="images/noodle-soup.jpg" alt="Noodle Soup"/>
-            <div style="flex:1">
-              <div class="row">
-                <h3>Noodle Soup</h3>
-                <div class="price">£12.50</div>
-              </div>
-              <div class="muted">A comforting broth with noodles and fresh herbs.</div>
-              <div class="badges"><span class="badge">Soy</span><span class="badge warn">Gluten</span><span class="badge">Egg (if chosen)</span></div>
-            </div>
-          </div>
-          <div class="food">
-            <img src="images/khao-man-gai.jpg" alt="Khao Man Gai"/>
-            <div style="flex:1">
-              <div class="row">
-                <h3>Khao Man Gai</h3>
-                <div class="price">£12.50</div>
-              </div>
-              <div class="muted">Poached chicken on fragrant rice with zingy sauce.</div>
-              <div class="badges"><span class="badge">Soy</span><span class="badge">Sesame (in sauce)</span></div>
-            </div>
-          </div>
+      <div class="row">
+        <div class="card" style="flex:1">
+          <h2 style="margin:0 0 6px 0">Fresh Thai flavours, fast.</h2>
+          <p class="small" style="margin:0 0 10px 0">Order for <strong>pick-up</strong> or <strong>delivery</strong>. Images will be replaced with your real photos.</p>
+          <a class="cta" href="#menu">View Menu</a>
         </div>
       </div>
     </section>
 
-    <!-- MENU -->
+    <section id="specials">
+      <h2>Chef Specials</h2>
+      <p class="section-sub">Weekly specials — shown publicly here.</p>
+      <div id="specialsGrid" class="grid menu-grid"></div>
+    </section>
+
     <section id="menu">
-      <div class="section-title">
-        <h2>Menu</h2>
-        <div class="muted">Tap badges for allergens • Prices include VAT</div>
-      </div>
-      <div class="cards">
-        <!-- Spring Rolls -->
-        <div class="card">
-          <div class="food">
-            <img src="images/spring-rolls.jpg" alt="Crispy spring rolls"/>
-            <div style="flex:1">
-              <div class="row">
-                <h3>Spring Rolls (V)</h3>
-                <div class="price">£5.00</div>
-              </div>
-              <div class="muted">Crispy vegetable rolls, sweet chilli dip.</div>
-              <div class="badges"><span class="badge warn">Gluten</span><span class="badge">Soy</span><span class="badge">Sesame</span></div>
-            </div>
-          </div>
-        </div>
-        <!-- Pad Thai -->
-        <div class="card">
-          <div class="food">
-            <img src="images/pad-thai.jpg" alt="Pad Thai"/>
-            <div style="flex:1">
-              <div class="row">
-                <h3>Pad Thai</h3>
-                <div class="price">£9.50</div>
-              </div>
-              <div class="muted">Stir-fried rice noodles, egg, tamarind, peanuts.</div>
-              <div class="badges"><span class="badge">Egg</span><span class="badge warn">Peanuts</span><span class="badge">Soy</span><span class="badge">Fish (sauce)</span></div>
-            </div>
-          </div>
-        </div>
-        <!-- Green Curry -->
-        <div class="card">
-          <div class="food">
-            <img src="images/green-curry.jpg" alt="Green Curry"/>
-            <div style="flex:1">
-              <div class="row">
-                <h3>Green Curry</h3>
-                <div class="price">£9.50</div>
-              </div>
-              <div class="muted">Fragrant green curry with coconut milk & basil.</div>
-              <div class="badges"><span class="badge">Soy</span><span class="badge">Fish (sauce)</span></div>
-            </div>
-          </div>
-        </div>
-        <!-- Salt & Pepper Chips -->
-        <div class="card">
-          <div class="food">
-            <img src="images/salt-and-pepper-chips.jpg" alt="Salt and Pepper Chips"/>
-            <div style="flex:1">
-              <div class="row">
-                <h3>Salt &amp; Pepper Chips</h3>
-                <div class="price">£3.00</div>
-              </div>
-              <div class="muted">Crispy chips tossed with peppers, onion & spice.</div>
-              <div class="badges"><span class="badge">Vegan</span><span class="badge">GF on request</span></div>
-            </div>
-          </div>
-        </div>
-        <!-- Jasmine Rice -->
-        <div class="card">
-          <div class="food">
-            <img src="images/jasmine-rice.jpg" alt="Boiled Jasmine Rice"/>
-            <div style="flex:1">
-              <div class="row">
-                <h3>Boiled Jasmine Rice</h3>
-                <div class="price">£2.00</div>
-              </div>
-              <div class="muted">Steamed fragrant Thai jasmine rice.</div>
-              <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten‑free</span></div>
-            </div>
-          </div>
-        </div>
-        <!-- Fries (image fixed) -->
-        <div class="card">
-          <div class="food">
-            <img src="images/fries.jpg" alt="Straight cut fries"/>
-            <div style="flex:1">
-              <div class="row">
-                <h3>Straight Cut Fries</h3>
-                <div class="price">£2.00</div>
-              </div>
-              <div class="muted">Golden fries, perfectly seasoned.</div>
-              <div class="badges"><span class="badge">Vegan</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h2>Menu</h2>
+      <p class="section-sub">Browse by category below. Prices shown in GBP. All specials and menu items are shown.</p>
+      <div id="menuGrid" class="grid menu-grid"></div>
     </section>
 
-    <!-- PRE-PREPPED MEALS -->
     <section id="prepped">
-      <div class="section-title">
-        <h2>Pre‑prepped Meals</h2>
-        <div class="muted">Chilled, portion‑controlled. Reheat in minutes.</div>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <div class="row" style="justify-content:space-between;align-items:flex-start">
-            <div>
-              <h3 style="margin:0 0 6px">High‑Protein Chicken Pad Thai (400g)</h3>
-              <div class="muted">Extra chicken, reduced oil.</div>
-              <div class="badges"><span class="badge">Egg</span><span class="badge warn">Peanuts</span><span class="badge">Soy</span><span class="badge">Fish (sauce)</span></div>
-            </div>
-            <div class="price">£5.00</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="row" style="justify-content:space-between;align-items:flex-start">
-            <div>
-              <h3 style="margin:0 0 6px">Lean Green Curry &amp; Rice (450g)</h3>
-              <div class="muted">Light coconut option, jasmine rice.</div>
-              <div class="badges"><span class="badge">Soy</span><span class="badge">Fish (sauce)</span></div>
-            </div>
-            <div class="price">£5.00</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="row" style="justify-content:space-between;align-items:flex-start">
-            <div>
-              <h3 style="margin:0 0 6px">Tofu &amp; Veg Stir‑fry (400g)</h3>
-              <div class="muted">High‑veg, balanced carbs.</div>
-              <div class="badges"><span class="badge">Soy</span><span class="badge">Vegan</span></div>
-            </div>
-            <div class="price">£5.00</div>
-          </div>
-        </div>
-      </div>
+      <h2>Pre-Prepped Meals</h2>
+      <p class="section-sub">Convenient, portion-controlled boxes. Macros shown per box (estimates).</p>
+      <div id="preppedGrid" class="grid menu-grid"></div>
     </section>
 
-    <!-- ALLERGENS LEGEND -->
     <section id="allergens">
-      <div class="section-title">
-        <h2>Allergens</h2>
-        <div class="muted">If you have a food allergy or intolerance, please speak to us before ordering.</div>
-      </div>
+      <h2>Allergens</h2>
+      <p class="section-sub">Please <strong>inform us of any allergies</strong> when ordering.</p>
+      <div id="allergenLegend" class="kpi" style="margin-bottom:10px"></div>
       <div class="card">
-        <div class="badges" style="gap:10px">
-          <span class="badge warn">Gluten</span>
-          <span class="badge warn">Peanuts</span>
-          <span class="badge warn">Tree Nuts</span>
-          <span class="badge warn">Fish</span>
-          <span class="badge warn">Shellfish</span>
-          <span class="badge">Soy</span>
-          <span class="badge">Egg</span>
-          <span class="badge">Sesame</span>
-          <span class="badge">Milk</span>
-          <span class="badge">Mustard</span>
-          <span class="badge">Sulphites</span>
-        </div>
-        <p class="muted" style="margin-top:12px">We prepare food in a kitchen that handles all 14 allergens. Cross‑contamination may occur. Ask us for our full allergen matrix.</p>
-      </div>
-    </section>
-
-    <!-- NUTRITION -->
-    <section id="nutrition">
-      <div class="section-title">
-        <h2>Typical Nutrition (per 100g)</h2>
-        <div class="muted">Guidance values; may vary by portion and ingredients.</div>
-      </div>
-      <div class="card">
-        <table aria-label="Nutrition per 100 grams">
+        <table class="table" id="allergenTable">
           <thead>
-            <tr>
-              <th>Item</th>
-              <th>Energy (kcal)</th>
-              <th>Protein (g)</th>
-              <th>Fat (g)</th>
-              <th>Saturates (g)</th>
-              <th>Carbs (g)</th>
-              <th>Sugars (g)</th>
-              <th>Salt (g)</th>
-            </tr>
+            <tr><th>Item</th><th>Allergens</th><th>Notes</th></tr>
           </thead>
-          <tbody>
-            <tr><td>Boiled Jasmine Rice</td><td>130</td><td>2.4</td><td>0.3</td><td>0.1</td><td>28</td><td>0.1</td><td>0.0</td></tr>
-            <tr><td>Salt &amp; Pepper Chips</td><td>240</td><td>3.0</td><td>10.0</td><td>2.0</td><td>33</td><td>1.2</td><td>0.8</td></tr>
-            <tr><td>Spring Rolls</td><td>220</td><td>6.0</td><td>11.0</td><td>2.5</td><td>25</td><td>3.0</td><td>0.7</td></tr>
-            <tr><td>Pad Thai</td><td>200</td><td>7.0</td><td>7.0</td><td>1.5</td><td>28</td><td>5.0</td><td>1.2</td></tr>
-            <tr><td>Green Curry</td><td>140</td><td>5.0</td><td>10.0</td><td>6.0</td><td>5</td><td>2.0</td><td>0.9</td></tr>
-          </tbody>
+          <tbody></tbody>
         </table>
-        <p class="muted" style="margin-top:10px">These figures are estimates for guidance and not a substitute for dietary advice.</p>
+        <p class="small warn" style="margin-top:10px">Made in a kitchen that handles nuts, sesame, gluten, soy, eggs, milk, fish, and shellfish.</p>
       </div>
     </section>
 
-    <!-- ATHLETE SUGGESTIONS -->
-    <section id="athletes">
-      <div class="section-title">
-        <h2>Athlete Suggestions</h2>
-        <div class="muted">Simple picks to help you hit your targets.</div>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <h3 style="margin-top:0">Lean / Cut</h3>
-          <ul class="muted">
-            <li><strong>Khao Man Gai (no skin)</strong> + extra greens (high protein, moderate carbs)</li>
-            <li><strong>Lean Green Curry</strong> (light coconut) + <strong>Jasmine Rice (small)</strong></li>
-            <li><strong>Tofu &amp; Veg Stir‑fry</strong> with light sauce</li>
-          </ul>
-          <p class="muted">Tip: aim for 400–600 kcal per meal, prioritising protein and veg.</p>
-        </div>
-        <div class="card">
-          <h3 style="margin-top:0">Maintenance</h3>
-          <ul class="muted">
-            <li><strong>Pad Thai</strong> + side <strong>Jasmine Rice (small)</strong></li>
-            <li><strong>Green Curry</strong> + <strong>Jasmine Rice</strong></li>
-          </ul>
-          <p class="muted">Tip: 600–800 kcal per meal with balanced macros.</p>
-        </div>
-        <div class="card">
-          <h3 style="margin-top:0">Bulk</h3>
-          <ul class="muted">
-            <li><strong>Pad Thai (extra chicken)</strong> + <strong>Jasmine Rice</strong></li>
-            <li><strong>Khao Man Gai</strong> + <strong>Salt &amp; Pepper Chips</strong></li>
-          </ul>
-          <p class="muted">Tip: 800–1,000 kcal per meal; add carbs and healthy fats.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ORDER FORM -->
-    <section id="order">
-      <div class="section-title">
-        <h2>Order</h2>
-        <div class="muted">Choose <strong>Pick‑up</strong> or <strong>Delivery</strong>. No dine‑in service.</div>
-      </div>
+    <section id="nutrition">
+      <h2>Typical Nutrition (per 100g)</h2>
       <div class="card">
-        <form action="https://formspree.io/f/mblaqawb" method="POST">
-          <div class="choices" id="serviceChoices">
-            <label class="choice active"><input type="radio" name="service" value="Pick-up" checked>Pick‑up</label>
-            <label class="choice"><input type="radio" name="service" value="Delivery">Delivery</label>
-          </div>
-          <div class="row" style="gap:10px">
-            <input name="name" placeholder="Your name" required />
-            <input name="phone" placeholder="Phone" required />
-          </div>
-          <input type="email" name="email" placeholder="Email (for confirmation)" />
-          <textarea name="order" rows="5" placeholder="Your order (item names, quantities, options)…" required></textarea>
-          <input name="address" placeholder="Address (delivery only)" />
-          <button type="submit">Send Order</button>
-        </form>
+        <table class="table" id="nutritionTable">
+          <thead>
+            <tr><th>Item</th><th>kcal</th><th>Protein</th><th>Carbs</th><th>Fat</th><th>Sugars</th><th>Salt</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
     </section>
 
+    <section id="athlete">
+      <h2>Athlete Meal Suggestions</h2>
+      <div id="athleteGrid" class="grid menu-grid"></div>
+    </section>
+
+    <footer>
+      <div class="container" style="padding:16px 0">
+        <div class="footer-grid">
+          <div>
+            <h3 style="margin:0 0 8px 0">Contact</h3>
+            <p class="small" style="margin:0">Facebook: <a href="https://www.facebook.com/ThaiBitesStreetFood" target="_blank" rel="noopener">Thai Bites Street Food</a></p>
+            <p class="small" style="margin:4px 0 0 0">Address: Rydal Avenue, Hindley, Wigan, WN2 3QQ</p>
+          </div>
+          <div>
+            <h3 style="margin:0 0 8px 0">Hours</h3>
+            <p class="small" style="margin:0">See Facebook for latest opening times.</p>
+          </div>
+        </div>
+        <p class="small" style="margin:14px 0 0 0">© <span id="year"></span> Thai Bites Street Food</p>
+      </div>
+    </footer>
   </main>
 
-  <footer class="wrap">
-    <div>© <span id="yr"></span> Thai Bites Street Food • Hindley, Wigan • <a href="https://www.facebook.com/ThaiBitesStreetFood" target="_blank" rel="noopener">Facebook</a></div>
-    <div class="muted" style="margin-top:8px">Allergen and nutrition info are indicative only. Please contact us for specific requirements.</div>
-  </footer>
-
   <script>
-    // toggle active style on service choices
-    document.querySelectorAll('#serviceChoices .choice').forEach(el=>{
-      el.addEventListener('click',()=>{
-        document.querySelectorAll('#serviceChoices .choice').forEach(c=>c.classList.remove('active'))
-        el.classList.add('active');
-        el.querySelector('input').checked = true;
-      })
-    })
-    // year
-    document.getElementById('yr').textContent = new Date().getFullYear()
+    let categories = [{ id: 'starters', label: 'Starters' },{ id: 'mains', label: 'Mains' },{ id: 'sides', label: 'Sides' },{ id: 'drinks', label: 'Drinks' }];
+    let specials = [{ name:'Hor Mok Fish', price:12.5, description:'Steamed Thai curry fish custard, served with rice.', img:'assets/images/placeholders/hor-mok.jpg' },{ name:'Noodle Soup', price:12.5, description:'Aromatic broth with noodles and fresh herbs.', img:'assets/images/placeholders/noodle-soup.jpg' },{ name:'Khao Man Ghai', price:12.5, description:'Poached chicken on fragrant rice with ginger-garlic sauce.', img:'assets/images/placeholders/khao-man-ghai.jpg' }];
+    let menu = [{ name:'Salt & Pepper Chips', price:3, description:'Crispy chips tossed with salt, pepper, and aromatics.', img:'assets/images/salt-pepper-chips.jpg', category:'sides' },{ name:'Boiled Jasmine Rice', price:2, description:'Plain steamed jasmine rice.', img:'assets/images/jasmine-rice.jpg', category:'sides' }];
+    const preppedMeals = [{ name:'Lemongrass Chicken + Rice', price:5.5, kcal:500, protein:35, carbs:60, fat:12, description:'Pre-portioned lunch box.', img:'assets/images/placeholders/meal-lemongrass.jpg' },{ name:'Tofu & Veg Stir-fry + Rice', price:5, kcal:420, protein:20, carbs:62, fat:10, description:'Vegan option.', img:'assets/images/placeholders/meal-tofu.jpg' }];
+    const allergensLegend = ['Gluten','Eggs','Milk','Soy','Fish','Crustaceans','Molluscs','Peanuts','Tree Nuts','Sesame','Celery','Mustard','Sulphites','Lupin'];
+    const allergensMap = [{ item:'Salt & Pepper Chips', allergens:['Sesame (seasoning) – check','Gluten – if soy sauce used'], note:'Seasoning can vary — confirm on the day.' },{ item:'Boiled Jasmine Rice', allergens:[], note:'Naturally gluten-free.' }];
+    const nutrition100g = [{ item:'Boiled Jasmine Rice', kcal:130, protein:2.4, carbs:28.2, fat:0.3, sugar:0.1, salt:0.01 }];
+
+    function money(n){ return `£${(+n).toFixed(2)}`.replace('.00',''); }
+    function makeCard(item){
+      const card=document.createElement('div'); card.className='menu-card card';
+      card.innerHTML = `<img class="thumb" src="${item.img}" alt="${item.name}" onerror="this.src='assets/images/placeholders/placeholder.jpg'"/><div class="meta"><div class="row-line"><h3>${item.name}</h3><div class="price">${money(item.price)}</div></div>${item.description?`<p class="desc">${item.description}</p>`:''}</div>`; return card;
+    }
+    function renderTabs(){ const tabsEl=document.getElementById('tabs'); tabsEl.innerHTML=''; const allBtn=document.createElement('button'); allBtn.textContent='All'; allBtn.className='tab active'; allBtn.dataset.filter='all'; tabsEl.appendChild(allBtn); categories.forEach(c=>{ const btn=document.createElement('button'); btn.textContent=c.label; btn.className='tab'; btn.dataset.filter=c.id; tabsEl.appendChild(btn); }); tabsEl.addEventListener('click',e=>{ const t=e.target.closest('.tab'); if(!t) return; document.querySelectorAll('#tabs .tab').forEach(x=>x.classList.remove('active')); t.classList.add('active'); renderMenu(t.dataset.filter); }); }
+    function renderMenu(filter='all'){ const menuGrid=document.getElementById('menuGrid'); menuGrid.innerHTML=''; const items=filter==='all'? menu : menu.filter(i=>i.category===filter); if(items.length===0){ const empty=document.createElement('div'); empty.className='card'; empty.style.gridColumn='1 / -1'; empty.textContent='Menu is being updated — check back shortly.'; menuGrid.appendChild(empty); return; } items.forEach(item=>menuGrid.appendChild(makeCard(item))); }
+    function renderSpecials(){ const specialsGrid=document.getElementById('specialsGrid'); specialsGrid.innerHTML=''; specials.forEach(item=>specialsGrid.appendChild(makeCard(item))); }
+    function renderPreppedMeals(){ const grid=document.getElementById('preppedGrid'); if(!grid) return; grid.innerHTML=''; preppedMeals.forEach(m=>{ const card=makeCard(m); const meta=card.querySelector('.meta'); const kpi=document.createElement('div'); kpi.className='kpi'; ['kcal','protein','carbs','fat'].forEach(key=>{ const span=document.createElement('span'); span.className='mini'; const suffix=key==='kcal'?'kcal':'g'; span.textContent=`${key}: ${m[key]}${suffix}`; kpi.appendChild(span); }); meta.appendChild(kpi); grid.appendChild(card); }); }
+    function renderAllergens(){ const legend=document.getElementById('allergenLegend'); const tbody=document.querySelector('#allergenTable tbody'); if(legend){ legend.innerHTML=''; allergensLegend.forEach(a=>{ const chip=document.createElement('span'); chip.className='mini'; chip.textContent=a; legend.appendChild(chip); }); } if(tbody){ tbody.innerHTML=''; allergensMap.forEach(row=>{ const tr=document.createElement('tr'); const list=row.allergens&&row.allergens.length? row.allergens.join(', ') : 'None known'; tr.innerHTML=`<td>${row.item}</td><td>${list}</td><td>${row.note||''}</td>`; tbody.appendChild(tr); }); } }
+    function renderNutrition(){ const tbody=document.querySelector('#nutritionTable tbody'); if(!tbody) return; tbody.innerHTML=''; const fmt=v=>(v===null||v===undefined)?'TBC':(typeof v==='number'?(Number.isInteger(v)?v:v.toFixed(1)):v); nutrition100g.forEach(n=>{ const tr=document.createElement('tr'); tr.innerHTML=`<td>${n.item}</td><td>${fmt(n.kcal)}</td><td>${fmt(n.protein)}g</td><td>${fmt(n.carbs)}g</td><td>${fmt(n.fat)}g</td><td>${fmt(n.sugar)}g</td><td>${fmt(n.salt)}g</td>`; tbody.appendChild(tr); }); }
+    function renderAthlete(){ const grid=document.getElementById('athleteGrid'); if(!grid) return; grid.innerHTML=''; const plans=[{ title:'Shred (Cut)', target:'~450–650 kcal/meal', tips:['Choose lean proteins','Swap chips for veg','Go lighter on sauces'], sample:'Tofu & Veg + half rice; add steamed veg.' },{ title:'Bulk', target:'~700–900 kcal/meal', tips:['Double protein portions','Add extra rice','Pick a higher-calorie side'], sample:'Lemongrass Chicken + extra rice + side of chips.' },{ title:'Maintain / Perform', target:'~600–750 kcal/meal', tips:['Balance carbs & protein','Include some healthy fats','Hydrate well'], sample:'Noodle Soup (special) + boiled rice.' }]; plans.forEach(p=>{ const card=document.createElement('div'); card.className='card'; card.innerHTML=`<h3 style="margin-top:0">${p.title}</h3><p class="small"><strong>Target:</strong> ${p.target}</p><ul class="small" style="margin:8px 0 8px 18px">${p.tips.map(t=>`<li>${t}</li>`).join('')}</ul><p class="small"><strong>Sample:</strong> ${p.sample}</p>`; grid.appendChild(card); }); }
+
+    // ---- Public CSV loader (data/public_menu.csv) ----
+    function parseCSV(text){ const out=[], row=[]; let cell='', q=false; for(let i=0;i<text.length;i++){ const ch=text[i], nx=text[i+1]; if(ch==='"'){ if(q && nx==='"'){ cell+='"'; i++; } else { q=!q; } } else if(ch===',' && !q){ row.push(cell); cell=''; } else if((ch==='
+' || ch==='') && !q){ if(cell!=='' || row.length){ row.push(cell); out.push(row.splice(0)); cell=''; } } else { cell+=ch; } } if(cell!=='' || row.length){ row.push(cell); out.push(row); } return out.filter(r=>r.length>1); }
+    async function loadPublicMenu(){ try{ const res=await fetch('data/public_menu.csv',{cache:'no-store'}); if(!res.ok) return false; const text=await res.text(); const rows=parseCSV(text); const head=rows.shift().map(h=>h.toLowerCase().trim()); const idx=k=>head.indexOf(k); const m=[], s=[], seen=new Set(); for(const r of rows){ const get=k=>idx(k)===-1?'':(r[idx(k)]||''); const item={ name:get('name'), price:Number(get('price')||0), description:get('description'), img:get('image')? `assets/images/${get('image')}` : 'assets/images/placeholders/placeholder.jpg', category:(get('category')||'mains').toLowerCase() }; const special=['true','1','yes','y'].includes(String(get('special')).toLowerCase()); if(special){ s.push({name:item.name, price:item.price, description:item.description, img:item.img}); } else { m.push(item); seen.add(item.category); } } menu=m; specials=s; categories=Array.from(seen).sort().map(id=>({ id, label: id.replace(/\b\w/g,c=>c.toUpperCase()) })); renderTabs(); renderMenu('all'); renderSpecials(); renderAllergens(); return true; } catch(e){ console.warn('public_menu.csv not loaded'); return false; } }
+
+    // Boot
+    renderTabs(); renderMenu('all'); renderSpecials(); renderPreppedMeals(); renderAllergens(); renderNutrition(); renderAthlete(); document.getElementById('year').textContent = new Date().getFullYear(); loadPublicMenu();
   </script>
 </body>
 </html>
